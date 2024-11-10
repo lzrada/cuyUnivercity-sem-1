@@ -1,0 +1,18 @@
+{
+  "name": "sesi-7",
+  "version": "1.0.0",
+  "description": "sesi 7 cuyuniversity backend\u001b[D\u001b[C",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "aassasa"
+  ],
+  "author": "lazzghi",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.7",
+    "rupiah": "^0.0.4-beta"
+  }
+}

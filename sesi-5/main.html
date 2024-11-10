@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="text-center m-2 text-2xl" id="wrapper"></div>
+
+    <input class="m-2 border-2 rounded p-2 border-cyan-100" type="text" id="inputName" placeholder="Masukkan Nama" required />
+    <input type="email" id="email" placeholder="Masukkan Email" required />
+    <br />
+    <button class="bg-teal-300 text-sm rounded-md px-3 py-1 m-2 hover:bg-teal-400" onclick="addLocalStorage()">add</button>
+    <button onclick="localStorage.clear()">Hapus localStorage</button>
+    <script type="text/javascript">
+      let wrapper = document.querySelector("#wrapper");
+      let h1 = document.createElement("h1");
+      h1.textContent = "Local Storage";
+      wrapper.appendChild(h1);
+      function addLocalStorage() {
+        let name = document.getElementById("inputName").value;
+        let email = document.getElementById("email").value;
+
+        if (name && email) {
+          localStorage.setItem("name", name);
+          localStorage.setItem("email", email);
+          alert("Success add Data");
+        } else {
+          alert("please insert name and email");
+        }
+      }
+    </script>
+  </body>
+</html>
